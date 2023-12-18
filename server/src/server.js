@@ -2,17 +2,19 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const apiRouter = require('./routes/api');
+const mongoose = require('mongoose');
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/', apiRouter);
 
-const mongoose = require('mongoose');
+app.use('/', apiRouter);
+app.use('/register', apiRouter);
+app.use('/login', apiRouter);
 
 mongoose
-  .connect('mongodb://localhost:27017')
+  .connect(process.env.REACT_APP_DATABASE_URL)
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 

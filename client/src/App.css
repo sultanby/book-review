@@ -47,9 +47,70 @@ nav input[type=text] {
 footer {
   background-color: #f8f9fa;
   text-align: center;
-  padding: 10px;
+  padding: 3px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+
+/*register*/
+
+/* Register.css */
+.register-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.register-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.logout-button {
+  font-size: 1em;
+  padding: 5px;
+  color: white;
+  background-color: #4CAF50;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: white;
+  color: #4CAF50;
 }
